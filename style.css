@@ -30,7 +30,7 @@ body{
     margin: 6px;
     opacity: .9;
     cursor:pointer;
-    background-color: rgb(63,63,63);
+    background-color: blue;
     border-radius: 10px;
     transition: all .4s ease;
 }
