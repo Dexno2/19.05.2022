@@ -4,5 +4,16 @@
 }
 
 body{
-    background-color: gray;
+    background-color: rgb(63, 63, 63);
+}
+.slider{
+    width: 1100px;
+    height: 600px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+.mid{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
