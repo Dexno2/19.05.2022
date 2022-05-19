@@ -25,14 +25,13 @@ body{
     display: flex;
 }
 .bar{
-    height: 30px;
+    height: 8px;
     width: 30px;
     margin: 6px;
     opacity: .9;
-    cursor:pointer    ;
-    background-color: rgb(37,40,42);
-    border-radius: 50%;
-    border: 3px solid rgb(243, 112, 52);
+    cursor:pointer;
+    background-color: rgb(63,63,63);
+    border-radius: 10px;
     transition: all .4s ease;
 }
 
@@ -57,6 +56,18 @@ input[name="r"]{
     transition: all .6s ease;
 }
 .slide img{
-width: 800px;
-height: 100%;
+    width: 800px;
+    height: 100%;
+}
+#r1:checked ~  .s1{
+    margin-left: 0;
+}
+#r2:checked ~  .s1{
+    margin-left: -25%;
+}
+#r3:checked ~  .s1{
+    margin-left: -50%;
+}
+#r4:checked ~  .s1{
+    margin-left:-75%;
 }
