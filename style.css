@@ -17,3 +17,46 @@ body{
     left: 50%;
     transform: translate(-50%);
 }
+.navigation{
+    position: absolute;
+    bottom: 16px;
+    left:90px;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar{
+    height: 30px;
+    width: 30px;
+    margin: 6px;
+    opacity: .9;
+    cursor:pointer    ;
+    background-color: rgb(37,40,42);
+    border-radius: 50%;
+    border: 3px solid rgb(243, 112, 52);
+    transition: all .4s ease;
+}
+
+.bar:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 800px;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 100%;
+    transition: all .6s ease;
+}
+.slide img{
+width: 800px;
+height: 100%;
+}
