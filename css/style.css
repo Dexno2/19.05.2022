@@ -41,7 +41,7 @@ input[name="r"]{
     position: absolute;
     visibility: hidden;
 }
-.sliders{
+.images{
     width: 200%;
     height: 100%;
     display: flex;
