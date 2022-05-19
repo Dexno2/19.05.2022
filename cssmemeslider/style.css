@@ -1,48 +1,49 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
-    background-color: rgb(63, 63, 63);
+    background-color: #25282a;
+    color: white;
 }
-.conteiner{
+.slider {
+    width: 768px;
+    min-height: 500px;
+	margin: 50px auto;
+	position: relative;
+    overflow: hidden;
+}
+.slides {
+	background-color: black;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1000px;
-    max-height: 700px;
-    margin: auto;
-    margin-top: 50px;
+    width: 400%;
 }
-.slider{
-    width: 1100px;
-    height: 600px;
-    overflow: hidden;
+.slide {
+    width: 25%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
-.images{
-    overflow: hidden;
-    width: 200%;
+.slide img{
+    width: 100%;
     height: 100%;
-    display: flex;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
-.mid{
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translate(-50%);
-}
-.navigation{
-    position: absolute;
-    bottom: 16px;
-    left:90px;
-    transform: translateX(-50%);
+.navig{
     display: flex;
 }
 .bar{
     padding: 7px;
     margin: 5px;
-    border: 2px solid #71abff;
-    background-color: #71abff;
+    border: 2px solid blue;
+    background-color: blue;
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -58,43 +59,37 @@ body{
     background-color: #fff;
     border: 2px solid white;
     cursor: pointer;
+}      
+#r1:checked ~ .navig .bar:nth-of-type(1):hover,
+#r2:checked ~ .navig .bar:nth-of-type(2):hover,
+#r3:checked ~ .navig .bar:nth-of-type(3):hover,
+#r4:checked ~ .navig .bar:nth-of-type(4):hover,
+#r5:checked ~ .navig .bar:nth-of-type(5):hover {
+    border: 2px solid white;
 }
+#r1:checked ~ .navig .bar:nth-of-type(1),
+#r2:checked ~ .navig .bar:nth-of-type(2),
+#r3:checked ~ .navig .bar:nth-of-type(3),
+#r4:checked ~ .navig .bar:nth-of-type(4),    
+#r5:checked ~ .navig .bar:nth-of-type(5) {
+    border: 2px solid #71abff;
+    background-color: rgba(0,0,0,0);
+}   
 input[name="r"]{
     position: absolute;
     visibility: hidden;
 }
-
-.slide{
-    width: 100%;
-    transition: all .6s ease;
-}
-.texts{
-    display: flex;
-}
-.slide img{
-    width: 1100px;
-    height: 600px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-p{
-    font-size: 30px;
-    color: white;
-}
-#r1:checked ~ .images .s1{
+#r1:checked ~ .slides > .s1{  
     margin-left: 0;
 }
-#r2:checked ~ .images .s1{
+#r2:checked ~ .slides > .s1{
+    margin-left: -25%;
+}
+#r3:checked ~ .slides > .s1{
     margin-left: -50%;
 }
-#r3:checked ~ .images .s1{
-    margin-left: -100%;
-}
-#r4:checked ~ .images .s1{
-    margin-left: -300%;
+#r4:checked ~ .slides > .s1{
+    margin-left: -75%;
 }
 .text{
     overflow: hidden;
@@ -114,19 +109,19 @@ p{
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
 }
-#r1:checked ~ .text_niviga>.text>.texts>.s1{  
+#r1:checked ~ .navig>.text>.texts>.t1{  
     margin-left: 0;
 }
-#r2:checked ~ .text_niviga>.text>.texts>.s1{
+#r2:checked ~ .navig>.text>.texts>.t1{
     margin-left: -25%;
 }
-#r3:checked ~ .text_niviga>.text>.texts>.s1{
+#r3:checked ~ .navig>.text>.texts>.t1{
     margin-left: -50%;
 }
-#r4:checked ~ .text_niviga>.text>.texts>.s1{
+#r4:checked ~ .navig>.text>.texts>.t1{
     margin-left: -75%;
 }
-.text_niviga{
+.navig{
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
